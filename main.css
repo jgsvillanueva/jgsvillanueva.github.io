@@ -1,11 +1,11 @@
 body{
   font-family: Roboto Slab;
   font-size: 1em;
+  margin: auto;
 }
-h1{
-  font-family: Roboto Slab;
-  font-size: 2.25em;
 
+#btn{
+  height: 1.5em;
 }
 
 #content_1{
@@ -22,11 +22,24 @@ h1{
 
 #navigation{
   display: flex;
-
   padding: 20px 8vw;
   margin: auto;
   justify-content: space-between;
+}
 
+#navigation button {
+  display: none;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+
+#navigation ul li {
+  list-style-type: none;
+  display: inline-block;
 }
 
 #main{
@@ -51,30 +64,78 @@ h1{
 
 .hero_pic{
   height:100vh;
-  width: 50vw;
-  background-color: blue;
+  width: 55vw;
   order: 2;
+  background-image: url(https://images.unsplash.com/photo-1504494645474-cc4e25299579?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d91c5733efcb243b43f645b7d7a79f38&auto=format&fit=crop&w=1568&q=80);
 }
 .hero_header{
   height: 60vh;
-  width: 50vw;
-  background-color: green;
+  width: 45vw;
 }
 .hero_heading{
   display: flex;
+  padding-top: 17vh;
+  padding-bottom: .3em;
+  padding-left: 8vw;
+  font-family: Roboto Slab;
+  font-size: 2.25em;
+  font-weight: bold;
+}
+.hero_sub{
+  display: flex;
   padding-left: 8vw;
 }
-.hero_CTA{
-  height: 40vh;
-  width: 50vw;
-  background-color: red;
+#cta{
+  display: flex;
+  padding-top: 15vh;
+  padding-left: 8vw;
 }
 
 @media(max-width: 768px) {
   .hero_pic, .hero_header, .hero_CTA{
-    height: 33vh;
+    height: 50vh;
     width: 100vw;
   }
   .hero_pic, {
     order: 2;
+  }
+  #navigation button {
+    display: block;
+  }
+  .nav-links, .nav-links {
+    display: none;
+  }
+
+  #navigation ul li {
+    display: block;
+  }
+
+  .open { /* order of the selectors matter */
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 70px;
+    text-align: center;
+    width: 100%;
+    z-index: 10;
+    background-color: white;
+  }
+
+  .open li {
+    padding: 1em 0;
+  }
+
+  .open li:hover { /* pseduo-selector */
+    background-color: blue;
+    color: white;
+  }
+
+  main {
+    /*max-width: 60em;
+    max-width: 60rem;*/
+  }
+
+  p {
+    font-size: 1em;
+    line-height: 1.48;
   }
