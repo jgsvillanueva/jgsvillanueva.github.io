@@ -167,7 +167,7 @@ footer{
   justify-content: flex-end;
   height: 12em;
   width: 18em;
-  padding-left: 78vw;
+  padding-left: ;
 }
 #facebook{
   padding-right: 1em;
@@ -196,7 +196,7 @@ footer{
     order: 0;
   }
   .foot_img{
-    padding-left: 30vw;
+    padding-left: 0vw;
   }
   .gallery_grid{
     grid-template-columns: 1fr;
