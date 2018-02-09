@@ -66,10 +66,14 @@ body{
   height:100vh;
   width: 50vw;
   order: 2;
-  background-image: url(https://images.unsplash.com/photo-1504494645474-cc4e25299579?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d91c5733efcb243b43f645b7d7a79f38&auto=format&fit=crop&w=1568&q=80);
+
 }
 .hero_header{
   height: 60vh;
+  width: 50vw;
+}
+.cta{
+  height: 40vh;
   width: 50vw;
 }
 .hero_heading{
@@ -85,6 +89,7 @@ body{
   display: flex;
   padding-left: 8vw;
 }
+
 #cta{
   display: flex;
   padding-top: 15vh;
@@ -95,7 +100,7 @@ body{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding-top: 16vh;
+  padding-top: 24vh;
   padding-bottom:16vh;
 }
 #about_txt {
@@ -152,14 +157,46 @@ body{
   padding-top: 5vh;
   padding-bottom: 5vh;
 }
+footer{
+  background-color: whitesmoke;
+  height: auto;
+}
+#foot_img{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  height: 12em;
+  width: 18em;
+  padding-left: 78vw;
+}
+#facebook{
+  padding-right: 1em;
+}
 
+#footer_names{
+  padding-top: 8vh;
+  padding-left: 8vw;
+}
 @media(max-width: 768px) {
-  .hero_pic, .hero_header, .hero_CTA{
-    height: 50vh;
+  .hero_pic, .hero_header, .cta{
+    height: 30vh;
     width: 100vw;
   }
-  .hero_pic, {
-    order: 2;
+  .about_sec{
+    padding-top: 16vh;
+  }
+  .hero_header{
+    order: -1;
+    padding-bottom: 5vh
+  }
+  .cta{
+    order:2
+  }
+  .hero_pic {
+    order: 0;
+  }
+  .foot_img{
+    padding-left: 30vw;
   }
   .gallery_grid{
     grid-template-columns: 1fr;
